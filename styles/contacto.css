@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+:root {
+    --azul-raimon: #5483BF;
+    --gris-raimon: #BFBFBF;
+    --amarillo-raimon: #F2B705;
+    --naranja-raimon: #D98E04;
+    --marron-raimon: #A66D03;
+}
+
+body {
+    background-color: var(--gris-raimon);
+    max-width: 100%;
+    font-family: 'InazumaFont', sans-serif;
+}
+
+@font-face {
+    font-family: 'InazumaFont';
+    src: url('ruta/a/tu/fonte/inazuma.eot');
+    src: url('ruta/a/tu/fonte/inazuma.eot?#iefix') format('embedded-opentype'),
+        url('ruta/a/tu/fonte/inazuma.woff2') format('woff2'),
+        url('ruta/a/tu/fonte/inazuma.woff') format('woff'),
+        url('ruta/a/tu/fonte/inazuma.ttf') format('truetype'),
+        url('ruta/a/tu/fonte/inazuma.svg#InazumaFont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background-color: var(--amarillo-raimon);
+    text-align: center;
+    height: auto;
+    font-size: 1.8vw;
+    width: 100%;
+    max-width: 100%;
+    color: var(--azul-raimon);
+    transition: height 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    position: fixed;
+}
+
+#logo {
+    height: 10vh;
+    object-fit: scale-down;
+    max-width: 100%;
+}
+
+/* Barra superior por defecto: diseño horizontal */
+#barra-superior {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--azul-raimon);
+    width: 100%;
+    max-width: 100%;
+    height: 6vh;
+    position: fixed;
+    top: calc(var(--header-height, 10vh));
+    z-index: 999;
+}
+
+/* Botón hamburguesa (escondido en pantallas grandes) */
+#menu-label {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+main {
+    position: fixed;
+    top: calc(var(--header-height, 10vh) + 6vh);
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-width: 100%;
+    padding-bottom: 15vh;
+}
+
+/* Buscador y botones */
+.buscador {
+    font-size: 1.2vw;
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    color: white;
+    margin: 5px;
+    max-width: 100%;
+}
+
+/* Colores de los botones */
+.azul {
+    background-color: #6FA8DC;
+}
+
+.amarillo {
+    background-color: #F2B705;
+}
+
+.naranja {
+    background-color: #D98E04;
+}
+
+.marron {
+    background-color: #A66D03;
+}
+
+.especial {
+    background: linear-gradient(45deg, #5483BF, #F2B705);
+    max-width: 100%;
+}
+
+footer {
+    background-color: var(--amarillo-raimon);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    color: var(--azul-raimon);
+    height: 10vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 1100;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: var(--azul-raimon);
+    color: white;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1vw;
+    font-weight: bold;
+    color: var(--azul-raimon);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--gris-raimon);
+    border: 1px solid var(--azul-raimon);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    justify-content: space-evenly;
+    font-family: 'InazumaFont', sans-serif;
+}
+
+label {
+    font-size: 1.5vw;
+    margin-bottom: 15px;
+    max-width: 100%;
+    padding: 1.5vw;
+    font-weight: bold;
+    color: var(--azul-raimon);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.6vw;
+    margin-bottom: 25px;
+    border: 1px solid var(--azul-raimon);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    max-width: 100%;
+    font-family: 'InazumaFont', sans-serif;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: var(--azul-raimon);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    max-width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: var(--naranja-raimon);
+}
+
+select {
+    padding: 15px;
+    border: 1px solid var(--azul-raimon);
+    border-radius: 10px;
+    font-size: 1.5vw;
+    max-width: 100%;
+    font-family: 'InazumaFont', sans-serif;
+}
+
+option {
+    padding: 15px;
+    font-size: 1.5vw;
+    max-width: 100%;
+    font-family: 'InazumaFont', sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+}
+
+.botonEnviar {
+    background-color: var(--amarillo-raimon);
+    color: var(--azul-raimon);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    max-width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.botonEnviar:hover {
+    background-color: var(--naranja-raimon);
+    color: white;
+}
+
+#tyc {
+    margin-top: 25vh;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--azul-raimon);
+}
+
+h2 {
+    font-size: 2.5rem;
+    padding: 0.5vw;
+    font-weight: bold;
+    color: var(--azul-raimon);
+}
+
+p {
+    font-size: 1.2rem;
+    padding: 0.7vw;
+    font-family: 'InazumaFont', sans-serif;
+}
+@media (max-width: 760px) {
+    #menu-label {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: var(--azul-raimon);
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10000;
+        max-width: 100%;
+    }
+
+    #barra-superior {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: calc(var(--header-height, 10vh));
+        background-color: var(--azul-raimon);
+        width: 100%;
+        max-width: 100%;
+        z-index: 9999;
+        padding-bottom: 0;
+        height: 30vh;
+    }
+
+    .amarillo,
+    .azul,
+    .marron,
+    .especial,
+    .naranja {
+        font-size: 1rem;
+        padding: 5px 15px;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    #menu-toggle:checked+#menu-label+#barra-superior {
+        display: flex;
+    }
+
+    .buscador {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    #inicio-sesion {
+        width: 100%;
+    }
+
+    footer {
+        justify-content: left;
+    }
+
+    label {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        max-width: 100%;
+        padding: 1vw;
+    }
+
+    input {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        border: 1px solid var(--azul-raimon);
+        border-radius: 5px;
+        width: max-content;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    select {
+        padding: 10px;
+        border: 1px solid var(--azul-raimon);
+        border-radius: 5px;
+        font-size: 0.7rem;
+        width: 80vw;
+    }
+
+    option {
+        padding: 10px;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    form {
+        width: 100vw;
+    }
+
+}

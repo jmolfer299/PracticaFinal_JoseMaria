@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Variables de color */
+:root {
+    --azul-raimon: #5483BF;
+    --gris-raimon: #BFBFBF;
+    --amarillo-raimon: #F2B705;
+    --naranja-raimon: #D98E04;
+    --marron-raimon: #A66D03;
+}
+
+body {
+    background-color: var(--gris-raimon);
+    max-width: 100%;
+    font-family: 'InazumaFont', sans-serif;
+}
+
+/* Fuente personalizada */
+@font-face {
+    font-family: 'InazumaFont';
+    src: url('ruta/a/tu/fonte/inazuma.eot');
+    src: url('ruta/a/tu/fonte/inazuma.eot?#iefix') format('embedded-opentype'),
+        url('ruta/a/tu/fonte/inazuma.woff2') format('woff2'),
+        url('ruta/a/tu/fonte/inazuma.woff') format('woff'),
+        url('ruta/a/tu/fonte/inazuma.ttf') format('truetype'),
+        url('ruta/a/tu/fonte/inazuma.svg#InazumaFont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background-color: var(--amarillo-raimon);
+    text-align: center;
+    height: auto;
+    font-size: 1.8vw;
+    width: 100%;
+    max-width: 100%;
+    color: var(--azul-raimon);
+    transition: height 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    position: fixed;
+}
+
+#logo {
+    height: 10vh;
+    object-fit: scale-down;
+    max-width: 100%;
+}
+
+/* Barra superior */
+#barra-superior {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--azul-raimon);
+    width: 100%;
+    max-width: 100%;
+    height: 6vh;
+    position: fixed;
+    top: calc(var(--header-height, 10vh));
+    z-index: 999;
+}
+
+/* Botón hamburguesa */
+#menu-label {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+main {
+    position: fixed;
+    top: calc(var(--header-height, 10vh) + 6vh);
+    left: 0;
+    right: 0;
+    bottom: 10vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-width: 100%;
+    padding-bottom: 15vh;
+}
+
+/* Buscador y botones */
+.buscador {
+    font-size: 1.2vw;
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    border-radius: 0.8vw;
+    color: white;
+    margin: 5px;
+    max-width: 100%;
+}
+
+/* Colores de botones */
+.azul {
+    background-color: #6FA8DC;
+}
+
+.amarillo {
+    background-color: #F2B705;
+}
+
+.naranja {
+    background-color: #D98E04;
+}
+
+.marron {
+    background-color: #A66D03;
+}
+
+.especial {
+    background: linear-gradient(45deg, #5483BF, #F2B705);
+    max-width: 100%;
+}
+
+footer {
+    background-color: var(--amarillo-raimon);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    color: var(--azul-raimon);
+    height: 10vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 1100;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: var(--azul-raimon);
+    color: white;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.contact-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Categoría */
+.categoria {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--naranja-raimon);
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    border: #b27400 solid 2px;
+    color: #ffffff;
+}
+
+/* Línea de personajes */
+.linea-personajes {
+    width: 100vw;
+    max-width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    margin-bottom: 10vh;
+}
+
+/* Estilo de personajes */
+.personajes {
+    width: 10vw;
+    max-width: 10%;
+    height: 40vh;
+    border-radius: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: #3A6A9A solid 2px;
+    background-color: #E0E0E0;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.personajes:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transform: translateY(-20px);
+}
+
+.foto-personaje {
+    height: 30vh;
+    object-fit: scale-down;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.nombre-personaje {
+    font-size: 1rem;
+    font-weight: bold;
+    max-width: 100%;
+}
+
+.temporada,
+.trilogia {
+    font-size: 0.75rem;
+    color: #666;
+    max-width: 100%;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 760px) {
+    #menu-label {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: var(--azul-raimon);
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10000;
+        max-width: 100%;
+    }
+
+    #barra-superior {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: calc(var(--header-height, 10vh));
+        background-color: var(--azul-raimon);
+        width: 100%;
+        max-width: 100%;
+        z-index: 9999;
+        padding-bottom: 0;
+        height: 30vh;
+    }
+
+    .amarillo,
+    .azul,
+    .marron,
+    .especial,
+    .naranja {
+        font-size: 1rem;
+        padding: 5px 15px;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    #menu-toggle:checked + #menu-label + #barra-superior {
+        display: flex;
+    }
+
+    .linea-personajes {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .personajes {
+        width: 80vw;
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .foto-personaje {
+        height: 20vh;
+        object-fit: scale-down;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    .nombre-personaje {
+        font-size: 1.2rem;
+        font-weight: bold;
+        max-width: 100%;
+    }
+
+    .temporada,
+    .trilogia {
+        font-size: 1rem;
+        color: #666;
+        max-width: 100%;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .linea-personajes {
+        flex-direction: row;
+        align-items: space-evenly;
+        justify-content: space-evenly;
+        height: auto;
+        margin-bottom: 10vh;
+    }
+
+    .personajes {
+        width: 20vw;
+        max-width: 20%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border: #3A6A9A solid 2px;
+        background-color: #E0E0E0;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .foto-personaje {
+        height: 15vh;
+        object-fit: scale-down;
+        border-radius: 1vw;
+        max-width: 100%;
+    }
+
+    .nombre-personaje {
+        font-size: 1.1rem;
+        font-weight: bold;
+        max-width: 100%;
+    }
+
+    .temporada,
+    .trilogia {
+        font-size: 0.85rem;
+        color: #666;
+        max-width: 100%;
+    }
+
+    footer
+    {
+        justify-content: left;
+    }
+}
