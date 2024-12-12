@@ -50,11 +50,13 @@ header {
 }
 
 /* Barra superior por defecto: diseño horizontal */
+/* Barra superior por defecto: diseño horizontal */
 #barra-superior {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
     align-items: center;
-    justify-content: space-evenly;
     background-color: var(--azul-raimon);
     width: 100%;
     max-width: 100%;
@@ -73,16 +75,17 @@ header {
     display: none;
 }
 
+
 main {
     position: fixed;
     top: calc(var(--header-height, 10vh) + 6vh);
     left: 0;
     right: 0;
     bottom: 10vh;
+    height: calc(100vh - 16vh);
     overflow-y: auto;
     scrollbar-width: none;
     max-width: 100%;
-    padding-bottom: 15vh;
 }
 
 /* Buscador y botones */
@@ -123,6 +126,15 @@ button {
     max-width: 100%;
 }
 
+.azul, .amarillo, .naranja, .marron, .especial {
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    color: white;
+    margin: 5px;
+    width: 10vw;
+}
 footer {
     background-color: var(--amarillo-raimon);
     position: fixed;

@@ -56,42 +56,43 @@ header {
 
 /* Estilo de la barra superior de navegación */
 #barra-superior {
-    display: flex; /* Utiliza flexbox para el diseño */
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
     align-items: center;
-    justify-content: space-evenly; /* Espaciar elementos de manera uniforme */
-    background-color: var(--azul-raimon); /* Fondo azul */
+    background-color: var(--azul-raimon);
     width: 100%;
     max-width: 100%;
-    height: 6vh; /* Altura de la barra */
-    position: fixed; /* Fija la barra superior */
-    top: calc(var(--header-height, 10vh)); /* Posición debajo del encabezado */
-    z-index: 999; /* Prioridad sobre otros elementos */
+    height: 6vh;
+    position: fixed;
+    top: calc(var(--header-height, 10vh));
+    z-index: 999;
 }
 
-/* Estilo del botón de menú hamburguesa para pantallas pequeñas */
+/* Botón hamburguesa (escondido en pantallas grandes) */
 #menu-label {
-    display: none; /* Escondido en pantallas grandes */
+    display: none;
 }
 
 #menu-toggle {
     display: none;
 }
 
-/* Estilo del contenido principal */
+
 main {
     position: fixed;
-    top: calc(var(--header-height, 10vh) + 6vh); /* Posición debajo del encabezado y la barra */
+    top: calc(var(--header-height, 10vh) + 6vh);
     left: 0;
     right: 0;
     bottom: 10vh;
-    overflow-y: auto; /* Scroll vertical */
-    scrollbar-width: none; /* Esconde la barra de scroll */
+    height: calc(100vh - 16vh);
+    overflow-y: auto;
+    scrollbar-width: none;
     max-width: 100%;
-    padding-bottom: 15vh;
 }
 
-/* Estilo del buscador y botones */
+/* Buscador y botones */
 .buscador {
     font-size: 1.2vw;
     max-width: 100%;
@@ -104,9 +105,8 @@ button {
     border-radius: 8px;
     color: white;
     margin: 5px;
-    max-width: 100%;
+    width: 10vw;
 }
-
 /* Colores de los botones */
 .azul { background-color: #6FA8DC; }
 .amarillo { background-color: #F2B705; }

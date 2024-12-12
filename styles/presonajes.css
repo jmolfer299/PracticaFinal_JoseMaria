@@ -55,8 +55,9 @@ header {
 #barra-superior {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
     align-items: center;
-    justify-content: space-evenly;
     background-color: var(--azul-raimon);
     width: 100%;
     max-width: 100%;
@@ -66,7 +67,7 @@ header {
     z-index: 999;
 }
 
-/* Botón hamburguesa */
+/* Botón hamburguesa (escondido en pantallas grandes) */
 #menu-label {
     display: none;
 }
@@ -75,16 +76,17 @@ header {
     display: none;
 }
 
+
 main {
     position: fixed;
     top: calc(var(--header-height, 10vh) + 6vh);
     left: 0;
     right: 0;
     bottom: 10vh;
+    height: calc(100vh - 16vh);
     overflow-y: auto;
     scrollbar-width: none;
     max-width: 100%;
-    padding-bottom: 15vh;
 }
 
 /* Buscador y botones */
@@ -97,10 +99,10 @@ button {
     border: none;
     padding: 10px 20px;
     font-size: 0.8rem;
-    border-radius: 0.8vw;
+    border-radius: 8px;
     color: white;
     margin: 5px;
-    max-width: 100%;
+    width: 10vw;
 }
 
 /* Colores de botones */
@@ -200,6 +202,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 5vh;
 }
 
 .personajes:hover {

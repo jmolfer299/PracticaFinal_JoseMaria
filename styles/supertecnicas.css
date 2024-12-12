@@ -53,8 +53,9 @@ header {
 #barra-superior {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
     align-items: center;
-    justify-content: space-evenly;
     background-color: var(--azul-raimon);
     width: 100%;
     max-width: 100%;
@@ -63,7 +64,6 @@ header {
     top: calc(var(--header-height, 10vh));
     z-index: 999;
 }
-
 /* Botón hamburguesa (escondido en pantallas grandes) */
 #menu-label {
     display: none;
@@ -73,16 +73,17 @@ header {
     display: none;
 }
 
+
 main {
     position: fixed;
     top: calc(var(--header-height, 10vh) + 6vh);
     left: 0;
     right: 0;
     bottom: 10vh;
+    height: calc(100vh - 16vh);
     overflow-y: auto;
     scrollbar-width: none;
     max-width: 100%;
-    padding-bottom: 15vh;
 }
 
 /* Buscador y botones */
@@ -98,9 +99,8 @@ button {
     border-radius: 8px;
     color: white;
     margin: 5px;
-    max-width: 100%;
+    width: 10vw;
 }
-
 /* Colores de los botones */
 .azul {
     background-color: #6FA8DC;
@@ -120,8 +120,8 @@ button {
 
 .especial {
     background: linear-gradient(45deg, #5483BF, #F2B705);
-    max-width: 100%;
 }
+
 
 footer {
     background-color: var(--amarillo-raimon);

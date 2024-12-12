@@ -53,8 +53,9 @@ header {
 #barra-superior {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 10vw;
     align-items: center;
-    justify-content: space-evenly;
     background-color: var(--azul-raimon);
     width: 100%;
     max-width: 100%;
@@ -73,16 +74,17 @@ header {
     display: none;
 }
 
+
 main {
     position: fixed;
     top: calc(var(--header-height, 10vh) + 6vh);
     left: 0;
     right: 0;
     bottom: 10vh;
+    height: calc(100vh - 16vh);
     overflow-y: auto;
     scrollbar-width: none;
     max-width: 100%;
-    padding-bottom: 15vh;
 }
 
 /* Buscador y botones */
@@ -98,7 +100,7 @@ button {
     border-radius: 8px;
     color: white;
     margin: 5px;
-    max-width: 100%;
+    width: 10vw;
 }
 
 /* Colores de los botones */
@@ -165,10 +167,7 @@ footer {
     align-items: center;
     margin: 0 auto;
     text-align: center;
-    border: black 1px solid;
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 table {
@@ -176,6 +175,8 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
     margin-bottom: 10vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.529);
 }
 
 td {
