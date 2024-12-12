@@ -364,3 +364,77 @@ footer {
         justify-content: left;
     }
 }
+
+@media (max-width: 480px) {
+    #menu-label {
+        top: 5px;
+        right: 5px;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    button {
+        margin: 0;
+        width: 40vw;
+    }
+    #barra-superior {
+        top: calc(var(--header-height, 10vh));
+        height: 50vh;
+    }
+
+    .amarillo,
+    .azul,
+    .marron,
+    .especial,
+    .naranja {
+        font-size: 1rem;
+    }
+
+    .linea-personajes {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .personajes {
+        width: 90vw;
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 10vh;
+    }
+
+    .foto-personaje {
+        height: 15vh;
+        object-fit: scale-down;
+        border-radius: 5px;
+        max-width: 100%;
+    }
+
+    .nombre-personaje {
+        font-size: 1rem;
+        font-weight: bold;
+        max-width: 100%;
+    }
+
+    .temporada,
+    .trilogia {
+        font-size: 0.8rem;
+        color: #666;
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .contact-button {
+        bottom: 5px;
+        right: 10px;
+        font-size: 1rem;
+        padding: 10px;
+        width: 25vw;
+    }
+}

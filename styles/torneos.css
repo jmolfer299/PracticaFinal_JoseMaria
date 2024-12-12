@@ -263,3 +263,31 @@ td img {
     margin: 0 auto;
 }
 }
+
+@media (max-width: 480px) {
+    #menu-label {
+        top: 5px;
+        right: 5px;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    button {
+        margin: 0;
+        width:40vw;
+    }
+    #barra-superior {
+        top: calc(var(--header-height, 10vh));
+        height: 50vh;
+    }
+
+    .amarillo,
+    .azul,
+    .marron,
+    .especial,
+    .naranja {
+        font-size: 1rem;
+        width: 40vw;
+    }
+
+}

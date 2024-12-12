@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 100%; /* Asegura que el contenido no se desborde */
+    max-width: 100%;
+    /* Asegura que el contenido no se desborde */
 }
 
 /* Variables de color de la temática de Inazuma Eleven */
@@ -16,9 +17,11 @@
 
 /* Estilo general del cuerpo del documento */
 body {
-    background-color: var(--gris-raimon); /* Fondo gris */
+    background-color: var(--gris-raimon);
+    /* Fondo gris */
     max-width: 100%;
-    font-family: 'InazumaFont', sans-serif; /* Uso de la fuente personalizada */
+    font-family: 'InazumaFont', sans-serif;
+    /* Uso de la fuente personalizada */
 }
 
 /* Importación de la fuente personalizada 'InazumaFont' */
@@ -36,20 +39,26 @@ body {
 
 /* Estilo del encabezado */
 header {
-    background-color: var(--amarillo-raimon); /* Fondo amarillo del encabezado */
-    text-align: center; /* Centra el texto */
+    background-color: var(--amarillo-raimon);
+    /* Fondo amarillo del encabezado */
+    text-align: center;
+    /* Centra el texto */
     height: auto;
     font-size: 1.8vw;
     width: 100%;
     max-width: 100%;
-    color: var(--azul-raimon); /* Texto azul */
-    transition: height 0.1s ease-in-out, font-size 0.1s ease-in-out; /* Transición suave */
-    position: fixed; /* Fija el encabezado */
+    color: var(--azul-raimon);
+    /* Texto azul */
+    transition: height 0.1s ease-in-out, font-size 0.1s ease-in-out;
+    /* Transición suave */
+    position: fixed;
+    /* Fija el encabezado */
 }
 
 /* Estilo del logo */
 #logo {
-    height: 10vh; /* Altura del logo */
+    height: 10vh;
+    /* Altura del logo */
     object-fit: scale-down;
     max-width: 100%;
 }
@@ -107,13 +116,27 @@ button {
     margin: 5px;
     width: 10vw;
 }
+
 /* Colores de los botones */
-.azul { background-color: #6FA8DC; }
-.amarillo { background-color: #F2B705; }
-.naranja { background-color: #D98E04; }
-.marron { background-color: #A66D03; }
+.azul {
+    background-color: #6FA8DC;
+}
+
+.amarillo {
+    background-color: #F2B705;
+}
+
+.naranja {
+    background-color: #D98E04;
+}
+
+.marron {
+    background-color: #A66D03;
+}
+
 .especial {
-    background: linear-gradient(45deg, #5483BF, #F2B705); /* Gradiente especial */
+    background: linear-gradient(45deg, #5483BF, #F2B705);
+    /* Gradiente especial */
     max-width: 100%;
 }
 
@@ -130,14 +153,16 @@ button {
 
 /* Estilo del pie de página */
 footer {
-    background-color: var(--amarillo-raimon); /* Fondo amarillo */
+    background-color: var(--amarillo-raimon);
+    /* Fondo amarillo */
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
     padding: 10px 20px;
     font-size: 0.8rem;
-    color: var(--azul-raimon); /* Texto azul */
+    color: var(--azul-raimon);
+    /* Texto azul */
     height: 10vh;
     width: 100%;
     max-width: 100%;
@@ -156,22 +181,28 @@ footer {
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 8px;
-    background-color: var(--azul-raimon); /* Fondo azul */
+    background-color: var(--azul-raimon);
+    /* Fondo azul */
     color: white;
     cursor: pointer;
     max-width: 100%;
 }
 
 .contact-button:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    transform: scale(1.1);
+    /* Efecto de agrandamiento */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra */
 }
 
 /* Estilo de las secciones del contenido */
 .seccion {
-    border: 1px solid var(--azul-raimon); /* Borde azul */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border: 1px solid var(--azul-raimon);
+    /* Borde azul */
+    border-radius: 10px;
+    /* Esquinas redondeadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
     padding: 2vw;
 }
 
@@ -185,71 +216,63 @@ p {
 
 /* Adaptaciones de estilos para pantallas pequeñas */
 @media (max-width: 760px) {
-    #menu-label {
-        display: block;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        background-color: var(--azul-raimon); /* Fondo azul */
-        color: white;
-        font-size: 1rem;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 10000;
-        max-width: 100%;
-    }
-
-    #barra-superior {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: calc(var(--header-height, 10vh));
-        background-color: var(--azul-raimon);
-        width: 100%;
-        max-width: 100%;
-        z-index: 9999;
-        padding-bottom: 0;
-        height: 30vh;
-    }
-
-    .amarillo,
-    .azul,
-    .marron,
-    .especial,
-    .naranja {
-        font-size: 1rem;
-        padding: 5px 15px;
-        margin: 0;
-        max-width: 100%;
-    }
-
-    #menu-toggle:checked + #menu-label + #barra-superior {
-        display: flex;
-    }
-
-    .buscador {
-        font-size: 1.5rem;
-        max-width: 100%;
-    }
-
-    footer {
-        justify-content: left;
-    }
-
-    .seccion {
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 1.5vw;
-    }
-
-    #fondo {
-        width: 90vw;
-        height: 60vh;
-        margin: 0 auto;
-    }
+#menu-label {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--azul-raimon);
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000;
+    max-width: 100%;
 }
 
+#barra-superior {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: calc(var(--header-height, 10vh));
+    background-color: var(--azul-raimon);
+    width: 100%;
+    max-width: 100%;
+    z-index: 9999;
+    height: 30vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.amarillo,
+.azul,
+.marron,
+.especial,
+.naranja {
+    font-size: 1rem;
+    padding: 5px 15px;
+    margin: 5px;
+    max-width: 100%;
+}
+
+#menu-toggle:checked+#menu-label+#barra-superior {
+    display: flex;
+}
+
+.buscador {
+    font-size: 1.5rem;
+    max-width: 100%;
+}
+
+footer {
+    justify-content: left;
+}
+button
+{
+    width: 40vw;
+}
+}
 /* Adaptaciones de estilos para pantallas medianas */
 @media (max-width: 1024px) and (min-width: 768px) {
     .buscador {
@@ -271,5 +294,79 @@ p {
         width: 90vw;
         height: 60vh;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #menu-label {
+        top: 5px;
+        right: 5px;
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    button {
+        margin: 0;
+    }
+
+    #barra-superior {
+        top: calc(var(--header-height, 10vh));
+        height: 50vh;
+    }
+
+    .amarillo,
+    .azul,
+    .marron,
+    .especial,
+    .naranja {
+        font-size: 1rem;
+        width: 40vw;
+    }
+
+    main {
+        top: calc(var(--header-height, 10vh) + 5vh);
+        padding: 10px;
+    }
+
+    .buscador {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .seccion {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 2vw;
+        border: 1px solid var(--azul-raimon);
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #fondo {
+        width: 80vw;
+        height: 50vh;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 10px;
+        border-top: 1px solid var(--azul-raimon);
+    }
+
+    .contact-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .seccion {
+        max-width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10vh;
+        padding: 1.5vw;
     }
 }
