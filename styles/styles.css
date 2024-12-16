@@ -195,6 +195,11 @@ footer {
     /* Sombra */
 }
 
+#indice
+{
+    margin-bottom: 20vh;
+}
+
 /* Estilo de las secciones del contenido */
 .seccion {
     border: 1px solid var(--azul-raimon);
