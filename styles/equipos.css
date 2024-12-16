@@ -489,4 +489,9 @@ footer {
     {
         justify-content: left;
     }
+
+    .division-equipos
+    {
+        margin-bottom: 20vh;
+    }
 }
