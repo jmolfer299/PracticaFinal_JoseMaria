@@ -376,3 +376,114 @@ button
     }
 }
 
+#contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.square {
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--azul-raimon);
+    border-radius: 10px;
+    background-color: var(--gris-raimon);
+    background-color: white;
+}
+
+.square img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.button {
+    background-color: var(--azul-raimon);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--naranja-raimon);
+}
+
+body.oscuro {
+    background-color: #484848;
+    color: #e0e0e0;
+}
+
+body.oscuro header {
+    background-color: #8b6800;
+    color: #e0e0e0;
+}
+
+body.oscuro #barra-superior {
+    background-color: #00378b;
+}
+
+body.oscuro .buscador button {
+    background-color: #444444;
+    color: #e0e0e0;
+}
+
+body.oscuro .especial {
+    background: linear-gradient(45deg, #444444, #666666);
+}
+
+body.oscuro main {
+    background-color: #5b5b5b;
+}
+
+body.oscuro #contenido {
+    background-color: #5b5b5b;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.oscuro .square {
+    background-color: #2c2c2c;
+    border-color: #444444;
+}
+
+body.oscuro .button {
+    background-color: #444444;
+    color: #e0e0e0;
+}
+
+body.oscuro .button:hover {
+    background-color: #666666;
+}
+
+body.oscuro footer {
+    background-color: #00378b;
+    color: #e0e0e0;
+}
+
+body.oscuro .contact-button {
+    background-color: #444444;
+}
+
+body.oscuro .contact-button:hover {
+    background-color: #666666;
+}
